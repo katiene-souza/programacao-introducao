@@ -405,3 +405,10 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
         </body>
     </html>
 ```
+
+## Outros Links
+
+Aqui, deixarei outros links para que você possa consultar tutorias e documentações mais completas sobre HTML. 
+- [HTML Tutorial do W3schools](https://www.w3schools.com/html/)
+- [HTML Tutorial do MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+
