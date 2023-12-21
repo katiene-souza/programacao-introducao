@@ -1,5 +1,22 @@
 # Revisão HTML
 
+## Sumário 
+
+- [Estrutura básica](#estrutura-básica)
+- [Principais TAG's utilizadas no body/corpo da página](#principais-tags-utilizadas-no-bodycorpo-da-página)
+    -[Título](#título)
+    -[Parágrafo](#parágrafo)
+    -[Links](#links)
+    -[Div](#div)
+    -[Imagem](#imagem)
+    -[Listas](#listas)
+    -[Tabelas](#tabelas)
+    -[#Formulários](#formulários)
+- [Identificação de Elementos únicos ou em grupo](#identificação-de-elementos-únicos-ou-em-grupo)
+- [HTML Semântico](#html-semântico)
+
+## Estrutura básica
+
 Um ponto importante, é que a maioria das TAG's são declaras utilizando os sinais de `<` e `>`. Temos as TAG's de abertura e fechamento `<exemplo></exemplo>` e algumas TAG's são de auto fechamento `<exemplo/>`.
 
 A primeira coisa que colocamos no arquivo é `DOCTYPE` que serve para indicar ao navegador que ele deve utilizar a última versão do HTML, ele é colocado no inicio do arquivo dessa forma: 
@@ -217,7 +234,7 @@ Uma outra coisa que podemos fazer, é criar tabelas, começamos utilizando a TAG
     </html>
 ```
 
-## Formulários
+### Formulários
 
 Os formulários `<form>` são elementos que permitem aos usuários interagirem com uma página web, enviando dados para o servidor. Formulários são frequentemente utilizados para coletar informações do usuário, como dados de login, detalhes de contato, pesquisas, etc.
 
@@ -272,7 +289,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
-1. `<aside>`>: Indica conteúdos laterais ou principal, como menus ou listas.
+2. `<aside>`>: Indica conteúdos laterais ou principal, como menus ou listas.
 
 ```HTML
     <html lang="pt">
@@ -291,7 +308,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
-1. `<section>`: define seções genérica de conteúdos e gerealmente possui um título.
+3. `<section>`: define seções genérica de conteúdos e gerealmente possui um título.
 
 ```HTML
     <html lang="pt">
@@ -306,7 +323,8 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
         </body>
     </html>
 ```
-1. `<article>`: destaca um conteúdo independente de um documento, página, aplicação, ou site. Basicamente, ele não depende de outro conteúdo para fazer sentido, por exemplo, um artigo em um blog. 
+
+4. `<article>`: destaca um conteúdo independente de um documento, página, aplicação, ou site. Basicamente, ele não depende de outro conteúdo para fazer sentido, por exemplo, um artigo em um blog. 
 
 ```HTML
     <html lang="pt">
@@ -322,7 +340,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
-1. `<nav>`: utilizado quando precisamos representar um grupo de links de navegação, que utiliza as TAG's de listas.
+5. `<nav>`: utilizado quando precisamos representar um grupo de links de navegação, que utiliza as TAG's de listas.
 
 ```HTML
     <html lang="pt">
@@ -341,7 +359,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
-1. `<main>`: conteúdo principal da página ou seja de maior relevância, uma página deve ter apenas um conteúdo principal.
+6. `<main>`: conteúdo principal da página ou seja de maior relevância, uma página deve ter apenas um conteúdo principal.
 
 ```HTML
     <html lang="pt">
@@ -357,7 +375,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
-1. `<figure>`: marcação de uso específico para a inserção de uma figura.
+7. `<figure>`: marcação de uso específico para a inserção de uma figura.
 
 ```HTML
     <html lang="pt">
@@ -372,7 +390,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
-1. `<footer>`: colocado no final da página para representar o rodapé, normalmente utilizado para descrever informações de autoria.
+8. `<footer>`: colocado no final da página para representar o rodapé, normalmente utilizado para descrever informações de autoria.
 
 ```HTML
     <html lang="pt">
