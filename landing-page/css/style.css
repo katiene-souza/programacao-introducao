@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+    --color-primary: #FCFCFC;
+    --color-secundary: #0C0C34;
+    --color-logo: #C3716F;
+    --color-purple-light: #84849C;
+    --color-purple: #424364;
+    --color-background: #CAD8D1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+[name="corpo-principal"] {
+    background-color: var(--color-primary);
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.cabecalho {
+    display: flex;
+    margin-top: 1rem;
+    gap: 30rem;
+}
+
+.cabecalho h1 {
+    font-family: Playfair Display;
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--color-logo);
+}
+
+.menu {
+    display: flex;
+    gap: 4rem;
+}
+
+.menu div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu p {
+    font-family: Playfair Display;
+    font-size: 30px;
+    font-weight: 450;
+    color: var(--color-secundary);
+    white-space: nowrap;
+}
+
+.container-principal {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 6rem;
+}
+
+.descricao {
+    color: var(--color-secundary);
+    width: 34.75rem;
+}
+
+.descricao h1 {
+    font-family: Playfair Display;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.descricao p {
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    padding-bottom: 1rem;
+}
+
+.button {
+    font-family: Plus Jakarta Sans;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+}
+
+.botao-escuro {
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+   
+}
+
+.botao-claro {
+    background-color: var(--color-purple-light);
+    color: var(--color-secundary);
+}
+
+.buttons-principais {
+    display: flex;
+    gap: 2.25rem;
+    margin-top: 5rem;
+}
+
+.titulo {
+    font-family: Playfair Display;
+    font-size: 64px;
+    color: var(--color-secundary);
+    text-align: center;
+}
+
+.avaliacoes-clientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-background);
+    margin-top: 3rem;
+    padding: 2.5rem 0 4.5rem 0;
+    width: 100%;
+}
+
+.container-avaliacoes {
+    display: flex;
+    gap: 4.25rem;
+    margin-top: 5.25rem;
+}
+
+.card {
+    background-color: var(--color-primary);
+    text-align: center;
+    width: 14rem;
+    height: 22rem;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-family: Playfair Display;
+    font-size: 22px;
+    color: var(--color-purple);
+    padding: 1rem 0 1rem 0;
+}
+
+.card p {
+    font-family: Plus Jakarta Sans;
+    text-align: left;
+    color: var(--color-purple);
+    font-size: 15px;
+    padding-top: 1rem;
+    line-height: 1.8;
+}
+
+.marcas-parceiras {
+    margin: 3rem 0 5rem 0rem;
+}
+
+.marcas-parceiras h1 {
+    margin-bottom: 5rem;
+}
+
+.img-marcas-parceiras {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.rodape {
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+    gap: 15.75rem;
+    padding: 3rem 0rem 3rem 0;
+}
+
+.rodape h2 {
+    font-family: Playfair Display;
+    color: var(--color-secundary);
+    font-size: 39px;
+    padding-bottom: 1.5rem;
+}
+
+::placeholder {
+    color: var(--color-secundary);
+}
+
+.container-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.conteudo-contato {
+    display: flex;
+    align-items: center;
+    font-family: Plus Jakarta Sans;
+    color: var(--color-secundary);
+    font-size: 20px;
+    gap: 1rem;
+}
+
+[name="corpo-agredecimento"] {
+    background-color: var(--color-purple);
+    justify-content: center;
+}
+
+[name="corpo-agredecimento"] main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-primary); 
+    padding: 5rem;
+    border-radius: 8px;
+    width: 79.25rem;
+}
+
+[name="corpo-agredecimento"] h1{
+    color: var(--color-purple);
+    font-family: Playfair Display;
+    font-size: 64px;
+    padding-bottom: 3.75rem;
+}
+
+[name="corpo-agredecimento"] p{
+    color: var(--color-purple);
+    font-family: Plus Jakarta Sans;
+    font-size: 48px;
+    padding-bottom: 3.75rem;
+    width: 42rem;
+}
+
+.conteudo-agradecimento {
+    padding-top: 4rem;
+}
+
+.conteudo-agradecimento input {
+    background: transparent;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;    
+    border: 2px solid var(--color-secundary);
+    padding: 1rem;
+    border-radius: 50px;
+}
+
+[name="formulario-compra"] {
+    background-color: var(--color-background);
+    justify-content: center;
+}
+
+[name="formulario-compra"] form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-purple);
+    border-radius: 1rem;
+    width: 36.25rem;
+    height: 36.25rem;
+    gap: 1rem;
+}
+
+[name="formulario-compra"] label {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    gap: 1rem;
+    width: 22.5rem;
+    height: 2rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+[name="formulario-compra"] input, select {
+    background: transparent;
+    font-family: Plus Jakarta Sans;
+    outline: none;
+    font-size: 14px;    
+    border: none;
+    padding: 1rem;
+}
+
+[name="formulario-compra"] button {
+    margin-top: 3.25rem;
+    width: 25rem;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}

@@ -2,6 +2,7 @@
 
 ## Sumário 
 
+-[O que é HTML?](#o-que-é-html)
 - [Estrutura básica](#estrutura-básica)
 - [Principais TAG's utilizadas no body/corpo da página](#principais-tags-utilizadas-no-bodycorpo-da-página)
     - [Título](#título)  
@@ -15,6 +16,11 @@
 - [Identificação de Elementos únicos ou em grupo](#identificação-de-elementos-únicos-ou-em-grupo)
 - [HTML Semântico](#html-semântico)
 - [Outros Links](#outros-links)
+
+
+# O que é HTML?
+
+Significa "Hypertext Markup Language" (Linguagem de Marcação de Hipertexto), é a linguagem padrão usada para criar e projetar páginas da web. Desenvolvido como uma linguagem de marcação para descrever a estrutura básica de um documento hipertexto, o HTML permite a criação de páginas web e aplicativos online.
 
 ## Estrutura básica
 

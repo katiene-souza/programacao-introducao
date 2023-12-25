@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário de compra</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body name="formulario-compra">
+    <form>
+        <label>
+            <img src="../imagens/email.svg" alt="Icone de E-mail"/>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+        </label>
+        <label>
+            <img src="../imagens/data-nascimento.svg" alt="Icone de calendário"/> 
+            <input type="date" id="data-nascimento" name="data-nascimento" required/>
+        </label>
+        <label>
+            <img src="../imagens/pessoa.svg" alt="Icone de pessoa"/>
+            <input type="number" id="cpf" name="cpf"  placeholder="CPF" min="1" max="11" required/>
+        </label>
+        <label>
+            <img src="../imagens/bolsa.svg" alt="Icone de bolsa de compras"/>
+            <select name="forma-pagamento">
+                <option value="pix">Pix</option>
+                <option value="boleto">Boleto</option>
+                <option value="cartao">Cartão</option>
+            </select>
+        </label>
+        <button class="button botao-escuro"><a href="./compra.html">Enviar</a></button>
+    </form>
+</body>
+</html>
