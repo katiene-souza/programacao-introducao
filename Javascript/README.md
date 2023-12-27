@@ -57,12 +57,10 @@ Basicamente existe duas formas de comentar no código, em linha e em blocos de c
 As variáveis desempenham o papel de "recipientes" fundamentais para o armazenamento e manipulação de dados. Elas retêm valores em espaços de memória designados, sendo acessíveis posteriormente por meio dos nomes atribuídos a essas variáveis. No contexto do Javascript, há três palavras reservadas específicas para a declaração de variáveis: `var`, `let` e `const`.
 
 #### Escopo de Função vs. Escopo de Bloco
-
 - `var`: Tem escopo de função, o que significa que a variável é visível em toda a função, mesmo fora dos blocos de código.
 - `let` e `const`: Têm escopo de bloco, limitando a visibilidade da variável ao bloco em que foram declaradas. Isso ajuda a evitar problemas de poluição no escopo.
 
 #### Declaração de variáveis 
-
 Ao declarar uma variável, é necessário iniciar com uma das palavras reservadas mencionadas (`var`, `let` ou `const`), seguida pelo nome desejado. Em seguida, utiliza-se o operador de atribuição `=` para, finalmente, associar o valor ou dado que se pretende armazenar na memória a essa variável.
 
 1. `var` (atualmente seu uso é evitado) 
@@ -94,3 +92,15 @@ Ao declarar uma variável, é necessário iniciar com uma das palavras reservada
 Use `let` quando precisar de uma variável que pode ser reatribuída. Use `const` quando quiser garantir que o valor da variável permaneça constante após a inicialização.
 
 Em geral, é uma boa prática usar `const` sempre que possível, pois promove imutabilidade, o que pode tornar o código mais previsível e menos propenso a erros. Use `let` apenas quando souber que precisará reatribuir valores.
+
+#### Palavras reservadas
+São palavras que têm um significado específico na sintaxe e na semântica da linguagem, e não devem ser usadas como nomes de variáveis, funções ou qualquer outro identificador em seu código, pois isso pode resultar em erros, como por exemplo:
+```javascript
+   let const = Katiene;
+```
+A palavra `const` é uma palavra reservada e tentar utilizá-la para nomear uma variável, resultara em erro no seo código. 
+
+#### Práticas recomendadas para nomear variáveis 
+
+- Use nomes que descrevam claramente o propósito ou conteúdo da variável.
+- Adote uma convenção de nomenclatura consistente, é comum usar o estilo camelCase para nomes de variáveis, como `nomeDaVariavel`.
