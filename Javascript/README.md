@@ -17,7 +17,7 @@ São dois conceitos muito importantes da programação, e eles descrevem aspecto
 2. **Semântica:**
    - A semântica, por outro lado, está relacionada ao significado do código, ou seja, o que o código realmente faz, por exemplo, se você tentar dividir uma string por outra `("abc" / "def")`, a sintaxe pode estar correta, mas a semântica não faz sentido porque a divisão não é uma operação válida para strings.
 
-Se a sintaxe não estiver correta, o código não funciona. No entanto, mesmo com uma sintaxe correta, problemas semânticos podem levar a resultados indesejados ou a programas que não fazem o que você espera. Então, ambos se tornam importantes para o desenvolvimento. 
+Se a sintaxe não estiver correta, o código não funciona. No entanto, mesmo com uma sintaxe correta, problemas semânticos podem levar a resultados indesejados ou a programas que não fazem o que você espera. Então, ambos se tornam importantes para o desenvolvimento e "andam" juntos.
 
 ## Primeiros passos
 
