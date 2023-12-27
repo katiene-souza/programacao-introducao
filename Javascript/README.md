@@ -69,20 +69,23 @@ Ao declarar uma variável, é necessário iniciar com uma das palavras reservada
 ```Javascript
    var nome = Katiene;
 ```
-- A palavra reservada `var` foi a maneira original de declarar variáveis em JavaScript, mas ela tem algumas características que podem levar a comportamentos inesperados e dificultar o desenvolvimento de código seguro e previsível, algumas das razões são:  
+A palavra reservada `var` foi a maneira original de declarar variáveis em JavaScript, mas ela tem algumas características que podem levar a comportamentos inesperados e dificultar o desenvolvimento de código seguro e previsível, algumas das razões são:  
    - Tem escopo de função
    - **Hoisting:** É elevada (hoisted) para o topo do escopo da função ou do contexto global, o que pode resultar em comportamentos inesperados.
      ```javascript
          console.log(a); // retorna undefined, e não um erro de ReferenceError
          var a = 5;
      ```
-2. `let` (usada para variáveis que podem ser reatribuídas, ou seja, ter seus valores alterados após a inicialização)
+2. `let` (usada para variáveis que podem ser reatribuídas, ou seja, ter seus valores alterados após a inicialização, sua inicialização  não é obrigatória)
    ```javascript
-         let nome = Katiene;
+         let nome;
+         nome = Katiene;
          nome = Ana;
      ```
-3. `const` (são imutáveis e usada para constantes, ou seja, o valor não pode ser reatribuído após a atribuição inicial)
+3. `const` (usada para constantes, ou seja, o valor não pode ser reatribuído após a atribuição inicial, sua inicialização é obrigatória)
     ```javascript
+         const nome; //Isso resultaria em um erro, pois uma constante deve ser inicializada
+    
          const nome = Katiene;
          nome = Ana; //resultaria em um erro, pois nome não pode ser reatribuído 
      ```
