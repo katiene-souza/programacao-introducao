@@ -56,8 +56,33 @@ Basicamente existe duas formas de comentar no código, em linha e em blocos de c
 
 As variáveis desempenham o papel de "recipientes" fundamentais para o armazenamento e manipulação de dados. Elas retêm valores em espaços de memória designados, sendo acessíveis posteriormente por meio dos nomes atribuídos a essas variáveis. No contexto do Javascript, há três palavras reservadas específicas para a declaração de variáveis: `var`, `let` e `const`.
 
+#### Escopo de Função vs. Escopo de Bloco
+
+- `var`: Tem escopo de função, o que significa que a variável é visível em toda a função, mesmo fora dos blocos de código.
+- `let` e `const`: Têm escopo de bloco, limitando a visibilidade da variável ao bloco em que foram declaradas. Isso ajuda a evitar problemas de poluição no escopo.
+
+#### Declaração de variáveis 
+
 Ao declarar uma variável, é necessário iniciar com uma das palavras reservadas mencionadas (`var`, `let` ou `const`), seguida pelo nome desejado. Em seguida, utiliza-se o operador de atribuição `=` para, finalmente, associar o valor ou dado que se pretende armazenar na memória a essa variável.
 
 1. `var` (atualmente seu uso é evitado) 
+```Javascript
    var nome = Katiene;
-``
+```
+- A palavra reservada `var` foi a maneira original de declarar variáveis em JavaScript, mas ela tem algumas características que podem levar a comportamentos inesperados e dificultar o desenvolvimento de código seguro e previsível, algumas das razões são:  
+   - Tem escopo de função
+   - **Hoisting:** É elevada (hoisted) para o topo do escopo da função ou do contexto global, o que pode resultar em comportamentos inesperados.
+     ```javascript
+         console.log(a); // retorna undefined, e não um erro de ReferenceError
+         var a = 5;
+     ```
+2. `let` (usada para variáveis que podem ser reatribuídas, ou seja, ter seus valores alterados após a inicialização)
+   ```javascript
+         let nome = Katiene;
+         nome = Ana;
+     ```
+3. `const` (são imutáveis e usada para constantes, ou seja, o valor não pode ser reatribuído após a atribuição inicial)
+    ```javascript
+         const nome = Katiene;
+         nome = Ana; //resultaria em um erro, pois nome não pode ser reatribuído 
+     ```
