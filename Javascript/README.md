@@ -69,13 +69,14 @@ Ao declarar uma variável, é necessário iniciar com uma das palavras reservada
 ```Javascript
    var nome = Katiene;
 ```
-A palavra reservada `var` foi a maneira original de declarar variáveis em JavaScript, mas ela tem algumas características que podem levar a comportamentos inesperados e dificultar o desenvolvimento de código seguro e previsível, algumas das razões são:  
-   - Tem escopo de função
-   - **Hoisting:** É elevada (hoisted) para o topo do escopo da função ou do contexto global, o que pode resultar em comportamentos inesperados.
+- A palavra reservada `var` foi a maneira original de declarar variáveis em JavaScript, mas ela tem algumas características que podem levar a comportamentos inesperados e dificultar o desenvolvimento de código seguro e previsível, algumas das razões são:  
+   - Tem escopo de função.
+   - **Hoisting:** É elevada (hoisted) para o topo do escopo da função ou do contexto global, o que pode resultar em comportamentos. inesperados.
      ```javascript
          console.log(a); // retorna undefined, e não um erro de ReferenceError
          var a = 5;
      ```
+- Por isso é recomendado o uso de `let` ou `const`.
 2. `let` (usada para variáveis que podem ser reatribuídas, ou seja, ter seus valores alterados após a inicialização, sua inicialização  não é obrigatória)
    ```javascript
          let nome;
@@ -89,3 +90,7 @@ A palavra reservada `var` foi a maneira original de declarar variáveis em JavaS
          const nome = Katiene;
          nome = Ana; //resultaria em um erro, pois nome não pode ser reatribuído 
      ```
+    
+Use `let` quando precisar de uma variável que pode ser reatribuída. Use `const` quando quiser garantir que o valor da variável permaneça constante após a inicialização.
+
+Em geral, é uma boa prática usar `const` sempre que possível, pois promove imutabilidade, o que pode tornar o código mais previsível e menos propenso a erros. Use `let` apenas quando souber que precisará reatribuir valores.
