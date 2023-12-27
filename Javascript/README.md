@@ -51,3 +51,7 @@ Basicamente existe duas formas de comentar no código, em linha e em blocos de c
        código
     */
 ```
+
+### Variáveis
+
+As variáveis são basicamente "containers" usados para armazenar e manipular dados. Elas armazenam valores/dados em locais de memória e posteriormente podem ser acessadas atráves dos nomes que você deu as variáveis. No Javascript existe três formas de nomear variáveis: `var`, `let` e `const`.
