@@ -54,4 +54,6 @@ Basicamente existe duas formas de comentar no código, em linha e em blocos de c
 
 ### Variáveis
 
-As variáveis são basicamente "containers" usados para armazenar e manipular dados. Elas armazenam valores/dados em locais de memória e posteriormente podem ser acessadas atráves dos nomes que você deu as variáveis. No Javascript existe três formas de nomear variáveis: `var`, `let` e `const`.
+As variáveis desempenham o papel de "recipientes" fundamentais para o armazenamento e manipulação de dados. Elas retêm valores em espaços de memória designados, sendo acessíveis posteriormente por meio dos nomes atribuídos a essas variáveis. No contexto do Javascript, há três palavras-chave específicas para a declaração de variáveis: `var`, `let` e `const`.
+
+Ao declarar uma variável, é necessário iniciar com uma das palavras-chave mencionadas (`var`, `let` ou `const`), seguida pelo nome desejado. Em seguida, utiliza-se o operador de atribuição = para, finalmente, associar o valor ou dado que se pretende armazenar na memória a essa variável.
