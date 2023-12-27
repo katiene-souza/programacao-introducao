@@ -37,7 +37,9 @@ Para utilizar o `Javascript` com `HTML`, precisamos referenciá-lo no arquivo `H
     </html>
 ```
 
-## Comentários no código
+## Conceitos do Javascript
+
+### Comentários no código
 
 Basicamente existe duas formas de comentar no código, em linha e em blocos de código, fazemos dessa forma: 
 
