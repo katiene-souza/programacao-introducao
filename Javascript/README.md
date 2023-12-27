@@ -104,7 +104,7 @@ A palavra `const` é uma palavra reservada e tentar utilizá-la para nomear uma 
 
 - Use nomes que descrevam claramente o propósito ou conteúdo da variável.
 - Adote uma convenção de nomenclatura consistente, é comum usar o estilo camelCase para nomes de variáveis, dessa forma: `nomeDaVariavel`.
-- Evite nomes genéricos como `temp` para `temperatura`, seja claro no contexto o que eles representam.
+- Evite nomes genéricos como `temp` para `temperatura`, a menos que seja absolutamente claro no contexto o que eles representam.
 - Evite abreviações excessivas como `qtdd` para `quantidade`, para manter a clareza.
-- Escolha nomes consistentes e de acordo com o objetivo do código
-- Use comentários para esclarecer (O uso é somente se for necessários, comentários excessivos podem poluir a leitura e entendimento do código)
+- Escolha nomes consistentes e de acordo com o objetivo do código.
+- Use comentários para esclarecer (O uso é somente se for necessários, comentários excessivos podem poluir a leitura e entendimento do código).
