@@ -180,3 +180,6 @@ Os tipos de objetos em JavaScript são estruturas de dados mais complexas e pode
            let dataAtual = new Date();          
       ```
 É importante entender esses tipos, pois a manipulação adequada deles é crucial para o desenvolvimento eficaz em JavaScript. Além disso, tenha em mente que JavaScript é uma linguagem de tipagem dinâmica, o que significa que o tipo de uma variável pode ser alterado durante a execução do programa.
+
+### Operadores
+Os operadores são símbolos especiais que realizam operações em variáveis e valores. Eles são essenciais para realizar cálculos, comparações, operações lógicas e manipulações em dados.
