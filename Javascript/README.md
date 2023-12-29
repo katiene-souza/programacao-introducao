@@ -109,3 +109,74 @@ A palavra `const` é uma palavra reservada e tentar utilizá-la para nomear uma 
 - Use comentários para esclarecer (O uso é somente se for necessários, comentários excessivos podem poluir a leitura e entendimento do código).
 
 ### Tipos de Dados
+JavaScript é uma linguagem de programação dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de dados de uma variável antes de usá-la. Os tipos de dados em JavaScript podem ser divididos em dois grupos: tipos primitivos e tipos de objetos.
+
+#### Tipos Primitivos:
+
+São os tipos de dados mais básicos e simples, que representam valores imutáveis. Eles são armazenados diretamente na variável, o que significa que quando você atribui um valor primitivo a uma variável, a própria variável contém o valor real. Os tipos primitivos incluem:
+
+1. Number:
+      - Representa números inteiros ou de ponto flutuante.
+      ```javascript
+            let inteiro = 42;
+            let pontoFlutuante = 3.14;   
+      ```
+2. String:
+      - Representa sequências de caracteres.
+      ```javascript
+         let texto = "Olá, mundo!";            
+      ```
+3. Boolean:
+      - Representa valores lógicos true ou false.
+      ```javascript
+          let verdadeiro = true;
+          let falso = false;           
+      ```
+4. Null:
+      - Representa a ausência de valor intencional.
+      ```javascript
+         let nulo = null;            
+      ```
+5. Undefined:
+      - Indica que uma variável foi declarada, mas não foi atribuída um valor.
+      ```javascript
+         let indefinido;            
+      ```
+6. BigInt:
+      - Permite representar inteiros maiores que 2^53 - 1.
+      ```javascript
+         let numeroGrande = 9007199254740991n;            
+      ```
+7. Symbol:
+      - Introduzido no ECMAScript 6, representa identificadores únicos.
+      ```javascript
+         let simbolo = Symbol("descrição");           
+      ```
+
+#### Tipos de Objetos:
+
+Os tipos de objetos em JavaScript são estruturas de dados mais complexas e podem armazenar coleções de dados e funcionalidades. Ao contrário dos tipos primitivos, os tipos de objetos não armazenam diretamente os valores, mas sim uma referência à localização na memória onde os valores estão armazenados, falerei mais sobre eles depois. Alguns tipos de objetos comuns incluem:
+
+1. Object:
+      - Representa um objeto, que é uma coleção de pares chave-valor.
+      ```javascript
+          let pessoa = { nome: "João", idade: 30 };           
+      ```
+2. Array:
+      - Representa uma lista ordenada de valores.
+      ```javascript
+         let lista = [1, 2, 3, 4];            
+      ```
+3. Function:
+      - Representa uma função.
+      ```javascript
+          function somar(numeroUm, numeroDois) {
+           return numeroUm + numeroDois;
+      }           
+      ```
+4. Date:
+      - Representa uma data e hora.
+      ```javascript
+           let dataAtual = new Date();          
+      ```
+É importante entender esses tipos, pois a manipulação adequada deles é crucial para o desenvolvimento eficaz em JavaScript. Além disso, tenha em mente que JavaScript é uma linguagem de tipagem dinâmica, o que significa que o tipo de uma variável pode ser alterado durante a execução do programa.
