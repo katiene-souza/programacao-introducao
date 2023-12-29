@@ -185,44 +185,44 @@ Os tipos de objetos em JavaScript são estruturas de dados mais complexas e pode
 Os operadores são símbolos especiais que realizam operações em variáveis e valores. Eles são essenciais para realizar cálculos, comparações, operações lógicas e manipulações em dados.
 
 #### Operadores aritméticos
-1. Adição(`+`): soma dois ou mais valores.
+1. Adição (`+`): soma dois ou mais valores.
       ```javascript
-           let resultado = 2 + 5; // resultado 7
+           let resultado = 2 + 5; // resultado: 7
       ```
-2. Subtração(`-`):  Subtrai o segundo valor do primeiro.
+2. Subtração (`-`):  Subtrai o segundo valor do primeiro.
       ```javascript
-           let resultado = 6 - 2; // resultado 4    
+           let resultado = 6 - 2; // resultado: 4    
       ```
-3. Multiplicação(`*`) : Multiplica dois valores
+3. Multiplicação (`*`) : Multiplica dois valores
       ```javascript
-           let resultado = 2 * 6; // resultado 12    
+           let resultado = 2 * 6; // resultado: 12    
       ```
-4. Divisão(`\`) Divide o primeiro valor pelo segundo.
+4. Divisão (`\`) Divide o primeiro valor pelo segundo.
       ```javascript
-           let resultado = 6 \ 2; // resultado 3    
+           let resultado = 6 \ 2; // resultado: 3    
       ```
-5. Módulo(`%`): Retorna o resto da divisão do primeiro valor pelo segundo.
+5. Módulo (`%`): Retorna o resto da divisão do primeiro valor pelo segundo.
       ```javascript
            let resultado = 5 % 2;  // Resultado: 1 (resto da divisão de 5 por 2)  
       ```
-6. Incremento(`++`):  Adiciona 1 ao valor da variável.
+6. Incremento (`++`):  Adiciona 1 ao valor da variável.
       ```javascript
            let contador = 6 ;
-           contador++; // resultado 7    
+           contador++; // resultado: 7    
       ```
-7. Decremento(`--`): Subtrai 1 do valor da variável.
+7. Decremento (`--`): Subtrai 1 do valor da variável.
       ```javascript
            let contador = 6;
-           contador--; // resultado 5    
+           contador--; // resultado: 5    
       ```
 
 #### Operadores de atribuição 
 
-1. Operador simples(`=`): Atribui um valor a uma variável.
+1. Operador simples (`=`): Atribui um valor a uma variável.
       ```javascript
            let numero = 6;    
       ```
-2. Atribuição com Operação(`+=, -=, *=, /=`): Realiza uma operação antes de atribuir o resultado à variável.
+2. Atribuição com Operação (`+=, -=, *=, /=`): Realiza uma operação antes de atribuir o resultado à variável.
       ```javascript
           let numero = 5;
           numero += 3;  // resultado: 8
@@ -235,4 +235,38 @@ Os operadores são símbolos especiais que realizam operações em variáveis e 
 
           let numero = 6;
           numero /= 2;  // resultado: 3  
+      ```
+#### Operadores de comparação: comparar dois valores e retornar um resultado booleano (`true` ou `false`).
+
+1. Igualdade (`==`): Compara se dois valores são iguais, mas não verifica o tipo.
+      ```javascript
+           5 == "5";   // true (compara apenas o valor)  
+      ```
+2. Igualdade Estrita (`===`): Compara se dois valores são iguais em valor e tipo.
+      ```javascript
+           5 === "5";  // false (compara valor e tipo)  
+      ```
+3. Desigualdade (`!=`): Compara se dois valores são diferentes, mas não verifica o tipo.
+      ```javascript
+           5 != "5";   // false (compara apenas o valor) 
+      ```
+4. Desigualdade Estrita (`!==`): Compara se dois valores são diferentes em valor ou tipo.
+      ```javascript
+           5 !== "5";  // true (compara valor e tipo) 
+      ```
+5. Maior que (`>`): Verifica se o valor da esquerda é estritamente maior que o valor da direita.
+      ```javascript
+          10 > 5;   // true 
+      ```
+6. Menor que (<): Verifica se o valor da esquerda é estritamente menor que o valor da direita.
+      ```javascript
+           5 < 10;   // true 
+      ```
+7. Maior ou Igual a (>=): Verifica se o valor da esquerda é maior ou igual ao valor da direita.
+      ```javascript
+           10 >= 10;   // true  
+      ```
+8. Menor ou Igual a (<=): Verifica se o valor da esquerda é menor ou igual ao valor da direita.
+      ```javascript
+           5 <= 10;   // true  
       ```
