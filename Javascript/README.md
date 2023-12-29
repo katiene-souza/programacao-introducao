@@ -210,8 +210,29 @@ Os operadores são símbolos especiais que realizam operações em variáveis e 
            let contador = 6 ;
            contador++; // resultado 7    
       ```
-7. Decrremento(`--`): Subtrai 1 do valor da variável.
+7. Decremento(`--`): Subtrai 1 do valor da variável.
       ```javascript
            let contador = 6;
            contador--; // resultado 5    
+      ```
+
+#### Operadores de atribuição 
+
+1. Operador simples(`=`): Atribui um valor a uma variável.
+      ```javascript
+           let numero = 6;    
+      ```
+2. Atribuição com Operação(`+=, -=, *=, /=`): Realiza uma operação antes de atribuir o resultado à variável.
+      ```javascript
+          let numero = 5;
+          numero += 3;  // resultado: 8
+
+          let numero = 5;
+          numero -= 3;  // resultado: 2
+
+          let numero = 6;
+          numero *= 2;  // resultado: 12
+
+          let numero = 6;
+          numero /= 2;  // resultado: 3  
       ```
