@@ -236,7 +236,7 @@ Os operadores são símbolos especiais que realizam operações em variáveis e 
           let numero = 6;
           numero /= 2;  // resultado: 3  
       ```
-#### Operadores de comparação: comparar dois valores e retornar um resultado booleano (`true` ou `false`).
+#### Operadores de comparação: compara se dois valores e retornar um resultado booleano (`true` ou `false`).
 
 1. Igualdade (`==`): Compara se dois valores são iguais, mas não verifica o tipo.
       ```javascript
