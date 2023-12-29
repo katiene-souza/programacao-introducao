@@ -183,3 +183,35 @@ Os tipos de objetos em JavaScript são estruturas de dados mais complexas e pode
 
 ### Operadores
 Os operadores são símbolos especiais que realizam operações em variáveis e valores. Eles são essenciais para realizar cálculos, comparações, operações lógicas e manipulações em dados.
+
+#### Operadores aritméticos
+1. Adição(`+`): soma dois ou mais valores.
+      ```javascript
+           let resultado = 2 + 5; // resultado 7
+      ```
+2. Subtração(`-`):  Subtrai o segundo valor do primeiro.
+      ```javascript
+           let resultado = 6 - 2; // resultado 4    
+      ```
+3. Multiplicação(`*`) : Multiplica dois valores
+      ```javascript
+           let resultado = 2 * 6; // resultado 12    
+      ```
+4. Divisão(`\`) Divide o primeiro valor pelo segundo.
+      ```javascript
+           let resultado = 6 \ 2; // resultado 3    
+      ```
+5. Módulo(`%`): Retorna o resto da divisão do primeiro valor pelo segundo.
+      ```javascript
+           let resultado = 5 % 2;  // Resultado: 1 (resto da divisão de 5 por 2)  
+      ```
+6. Incremento(`++`):  Adiciona 1 ao valor da variável.
+      ```javascript
+           let contador = 6 ;
+           contador++; // resultado 7    
+      ```
+7. Decrremento(`--`): Subtrai 1 do valor da variável.
+      ```javascript
+           let contador = 6;
+           contador--; // resultado 5    
+      ```
