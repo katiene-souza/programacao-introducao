@@ -270,3 +270,16 @@ Os operadores são símbolos especiais que realizam operações em variáveis e 
       ```javascript
            5 <= 10;   // true  
       ```
+#### Operadores lógicos 
+1. AND (`&&`):  Retorna `true` se ambos os operandos forem `true`, caso contrário, retorna `false`.
+      ```javascript
+           let resultado = (5 > 10) || (10 < 20);   // Resultado: true
+      ```
+2. OR (`||`): Retorna `true` se pelo menos um dos operandos for `true`, caso contrário, retorna `false`.
+      ```javascript
+           let resultado = (5 > 10) || (10 < 20);   // Resultado: true 
+      ```
+3. NOT (`!`): Inverte o valor lógico do operando; se o operando for true, retorna false, e se for false, retorna true.
+      ```javascript
+           let resultado = !(5 > 10);   // Resultado: true 
+      ```
