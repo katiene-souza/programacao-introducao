@@ -2,7 +2,7 @@
 
 ## Sumário 
 
--[O que é HTML?](#o-que-é-html)
+- [O que é HTML?](#o-que-é-html)
 - [Estrutura básica](#estrutura-básica)
 - [Principais TAG's utilizadas no body/corpo da página](#principais-tags-utilizadas-no-bodycorpo-da-página)
     - [Título](#título)  
