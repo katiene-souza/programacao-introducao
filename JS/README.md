@@ -1,5 +1,13 @@
 # Revisão Javascript
 
+## Sumário 
+
+- [O que é Javascript?](#o-que-é-javascript)
+- [Diferença de Sintaxe e Semântica](#diferença-de-sintaxe-e-semântica)
+   - [Sintaxe](#sintaxe)
+   - [Semântica](#semântica)
+- [Primeiros passos](#primeiros-passos)
+
 ## O que é Javascript?
 
 É uma linguaguem de programação de alto nível, leve e interpretada. É uma das três principais tecnologias para web, juntamente com HTML(linguaguem de marcação de hipertexto) e CSS(Folhas de estilo em cascata), juntas elas são usadas para criar páginas web.
