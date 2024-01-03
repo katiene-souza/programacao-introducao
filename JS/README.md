@@ -4,9 +4,12 @@
 
 - [O que é Javascript?](#o-que-é-javascript)
 - [Diferença de Sintaxe e Semântica](#diferença-de-sintaxe-e-semântica)
-   - [Sintaxe](#sintaxe)
-   - [Semântica](#semântica)
 - [Primeiros passos](#primeiros-passos)
+- [Conceitos do Javascript](#conceitos-do-javascript)
+     - [Comentários no código](#comentários-no-código)
+     - [Variáveis](#variáveis)
+     - [Tipos de Dados](#tipos-de-dados)
+     - [Operadores](#operadores)
 
 ## O que é Javascript?
 
@@ -49,7 +52,9 @@ Para utilizar o `Javascript` com `HTML`, precisamos referenciá-lo no arquivo `H
 
 ### Comentários no código
 
-Basicamente existe duas formas de comentar no código, em linha e em blocos de código, fazemos dessa forma: 
+Comentários no código desempenham o papel crucial de explicar blocos específicos de código ou fornecer informações úteis para outros desenvolvedores. No entanto, é importante utilizar essa ferramenta com discernimento para evitar a poluição excessiva do código.
+
+Existem essencialmente duas formas de inserir comentários no código: em linha e em blocos. Podemos adotar ambas as práticas da seguinte maneira:
 
 ```Javascript
     // comentário em linha
@@ -117,6 +122,7 @@ A palavra `const` é uma palavra reservada e tentar utilizá-la para nomear uma 
 - Use comentários para esclarecer (O uso é somente se for necessários, comentários excessivos podem poluir a leitura e entendimento do código).
 
 ### Tipos de Dados
+
 JavaScript é uma linguagem de programação dinamicamente tipada, o que significa que você não precisa declarar explicitamente o tipo de dados de uma variável antes de usá-la. Os tipos de dados em JavaScript podem ser divididos em dois grupos: tipos primitivos e tipos de objetos.
 
 #### Tipos Primitivos:
