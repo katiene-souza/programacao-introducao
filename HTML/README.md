@@ -414,6 +414,7 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
 ```
 
 ## Continue seus estudos
+Esses links são de outros README.md onde falo sobre outras tecnologias. 
 
 - [CSS](https://github.com/katiene-souza/estudos-front-end/blob/main/CSS/README.md)
 - [Javascript](https://github.com/katiene-souza/estudos-front-end/blob/main/JS/README.md)
