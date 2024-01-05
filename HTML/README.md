@@ -415,7 +415,8 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
 
 ## Continue seus estudos
 
-
+- [CSS](https://github.com/katiene-souza/estudos-front-end/blob/main/CSS/README.md)
+- [Javascript](https://github.com/katiene-souza/estudos-front-end/blob/main/JS/README.md)
 
 ## Outros Links
 
