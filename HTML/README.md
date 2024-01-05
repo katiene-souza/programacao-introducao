@@ -413,6 +413,10 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
     </html>
 ```
 
+## Continue seus estudos
+
+
+
 ## Outros Links
 
 Aqui, deixarei outros links para que você possa consultar tutorias e documentações mais completas sobre HTML.
