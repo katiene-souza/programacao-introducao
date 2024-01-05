@@ -415,7 +415,9 @@ Refere-se à prática de usar tags HTML de uma maneira que reflete o significado
 
 ## Outros Links
 
-Aqui, deixarei outros links para que você possa consultar tutorias e documentações mais completas sobre HTML. 
+Aqui, deixarei outros links para que você possa consultar tutorias e documentações mais completas sobre HTML.
+- [Curso de HTML](https://www.youtube.com/watch?v=nPEpaft1y1k)
+- [Curso de HTML e CSS - Curso em Vídeo](https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n)
 - [HTML Tutorial do W3schools](https://www.w3schools.com/html/)
 - [HTML Tutorial do MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
