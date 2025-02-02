@@ -2,9 +2,9 @@
 
 ## O Desafio da Modelagem de Dados
 
-A criação de um banco de dados eficiente é um desafio que transcende o simples domínio técnico de SQL. **Uma modelagem de dados bem-feita é a espinha dorsal de qualquer sistema robusto e escalável**, funcionando como a ponte que conecta o mundo real ao universo digital. Ela envolve a criação de uma representação abstrata das informações que serão armazenadas, independentemente do sistema específico ou da entidade envolvida.
+A criação de um banco de dados eficiente é um desafio que vai além do simples domínio técnico de SQL. **Uma modelagem de dados bem-feita é fundamental para construir um sistema robusto e escalável**, funcionando como a ponte que conecta o mundo real ao digital. Ela envolve a criação de uma representação abstrata das informações que serão armazenadas, independentemente do sistema específico ou da entidade envolvida.
 
-Nesta etapa crucial, o foco migra da tecnologia em si, como o Sistema Gerenciador de Banco de Dados (SGBD) a ser utilizado, para a **organização lógica e a estrutura fundamental dos dados**. Essa fase reflete o entendimento profundo do analista sobre as nuances do negócio e estabelece as regras necessárias para garantir a qualidade, a integridade e a consistência das informações. Em suma, a modelagem de dados coloca a **visão estratégica da informação em primeiro plano, antes mesmo de sua implementação técnica**.
+Nesta etapa crucial, o foco migra da tecnologia em si, como o Sistema Gerenciador de Banco de Dados (SGBD) a ser utilizado, para a **organização lógica e a estrutura fundamental dos dados**. Essa fase reflete o entendimento do analista sobre o negócio e estabelece as regras necessárias para garantir a qualidade, a integridade e a consistência das informações. Em suma, a modelagem de dados coloca a **visão estratégica da informação em primeiro plano, antes mesmo de sua implementação técnica**.
 
 ## Bancos de Dados Relacionais: Organização e Eficiência
 
@@ -17,7 +17,9 @@ Embora existam diversos tipos de bancos de dados, como os baseados em lista inve
 A estrutura de um banco de dados relacional pode ser compreendida de duas maneiras: **informal e formal**.
 
 *   **Abordagem Informal:** Foca nos aspectos práticos e na usabilidade do banco de dados. Utiliza termos mais intuitivos como **tabela**, **linha** e **coluna**, facilitando a compreensão para aqueles que estão iniciando na área.
-*   **Abordagem Formal:** Adota uma perspectiva mais rigorosa, preocupando-se com a semântica formal do modelo. Emprega termos técnicos como **relação** (para tabela), **tupla** (para linha) e **atributo** (para coluna). Essa abordagem é crucial para a compreensão teórica e para a implementação de algoritmos complexos relacionados ao banco de dados.
+*   **Abordagem Formal:** Adota uma perspectiva que se  preocupa com a semântica formal do modelo. Emprega termos técnicos como **relação** (para tabela), **tupla** (para linha) e **atributo** (para coluna). Essa abordagem é crucial para a compreensão teórica e para a implementação de algoritmos complexos relacionados ao banco de dados.
+<br><br>
+![Group 1 (2)](https://github.com/user-attachments/assets/4f118235-1a94-43d7-bf9b-3ae3999a42fe)
 
 Em um banco de dados relacional (BDR), todos os dados são armazenados em **tabelas**, estruturas simples compostas por linhas e colunas. A verdadeira potência deste modelo reside na capacidade de **associar tabelas entre si por meio de relacionamentos**, que são estabelecidos ao conectar um ou mais atributos de uma tabela a um ou mais atributos de outra.
 
@@ -27,7 +29,8 @@ Vamos detalhar os principais componentes que constituem a estrutura de um banco 
 
 ### 1. Entidade (Tabela)
 
-A **entidade** é o alicerce do banco de dados relacional, representando um conjunto de elementos semelhantes, sejam eles pessoas, objetos concretos ou conceitos abstratos. Cada **tabela** em um banco de dados representa uma entidade específica. Por exemplo, em um banco de dados de uma loja, poderíamos ter entidades como `Clientes`, `Produtos` e `Pedidos`.
+A **entidade** é uma peça central do banco de dados relacional, representando um conjunto de elementos semelhantes, sejam eles pessoas, objetos concretos ou conceitos abstratos. Cada **tabela** em um banco de dados representa uma entidade específica. Por exemplo, em um banco de dados de uma loja, poderíamos ter entidades como `Clientes`, `Produtos` e `Pedidos`.
+![3](https://github.com/user-attachments/assets/7241d4a0-62ec-4421-ab8c-6055651ce4c2)
 
 Cada **linha** (ou registro) dentro de uma tabela representa uma instância única da entidade. Por exemplo, na tabela `Clientes`, cada linha corresponderia a um cliente específico, com seus dados individuais.
 
@@ -38,6 +41,7 @@ Cada **linha** (ou registro) dentro de uma tabela representa uma instância úni
 Os **atributos** definem as propriedades ou características de uma entidade. Eles correspondem às **colunas** de uma tabela e descrevem os dados que podem ser armazenados sobre cada instância da entidade.
 
 Cada atributo possui um **tipo de dado** associado, que define o tipo de valor que ele pode conter (por exemplo, texto, número, data). Na tabela `Clientes`, os atributos poderiam incluir `Nome`, `CPF`, `Email`, `Telefone`, e `Data de Nascimento`.
+![4](https://github.com/user-attachments/assets/66df77f9-53f4-4915-a276-8dcf7218f3e3)
 
 #### Tipos de Atributos
 
@@ -55,6 +59,7 @@ Os atributos podem ser classificados de acordo com suas características:
 
 *   **Chave Primária (Primary Key - PK):** Um atributo (ou conjunto de atributos) que **identifica unicamente cada registro** em uma tabela. A chave primária é **obrigatória** e **não pode conter valores nulos**. Ela garante que não haja duplicidade de registros na tabela. Exemplo: Na tabela `Clientes`, o `CPF` poderia ser utilizado como chave primária, pois cada cliente possui um CPF único.
 *   **Chave Estrangeira (Foreign Key - FK):** Um atributo (ou conjunto de atributos) em uma tabela que **faz referência à chave primária de outra tabela**. A chave estrangeira estabelece um **relacionamento** entre as duas tabelas, garantindo a integridade referencial. Por exemplo, em uma tabela `Pedidos`, um atributo `CPF_Cliente` (chave estrangeira) poderia referenciar o `CPF` (chave primária) da tabela `Clientes`, indicando qual cliente realizou aquele pedido.
+![papel_1](https://github.com/user-attachments/assets/820454f7-1aa9-43c2-a601-cbf17d083203)
 
 ### 4. Domínio: Definindo Valores Válidos
 
@@ -65,12 +70,15 @@ Por exemplo, o domínio do atributo `Sexo` poderia ser definido como o conjunto 
 ### 5. Relacionamentos: Conectando as Entidades
 
 **Relacionamentos** definem as conexões lógicas entre as entidades (tabelas) em um banco de dados. Eles representam como as informações de uma tabela se associam às informações de outra tabela.
+![papel_2](https://github.com/user-attachments/assets/bfbb89ef-a1e4-4281-8f88-4428dca40ac6)
 
 Os relacionamentos são definidos por meio das chaves primárias e estrangeiras e são classificados de acordo com a **cardinalidade**, que especifica quantas instâncias de uma entidade podem estar relacionadas a quantas instâncias de outra entidade. Os tipos mais comuns de cardinalidade são:
 
 *   **Um para Um (1:1):** Uma instância de uma entidade se relaciona com apenas uma instância de outra entidade, e vice-versa.
 *   **Um para Muitos (1:N) ou Muitos para Um (N:1):** Uma instância de uma entidade pode se relacionar com várias instâncias de outra entidade, mas uma instância da segunda entidade se relaciona com apenas uma instância da primeira.
 *   **Muitos para Muitos (N:M):** Uma instância de uma entidade pode se relacionar com várias instâncias de outra entidade, e vice-versa. Este tipo de relacionamento geralmente requer uma tabela intermediária (também chamada de tabela associativa) para ser implementado.
+  
+Para entender melhor sobre cardinalidade, [assista esse vídeo](https://www.youtube.com/watch?v=Iu35blnyqvw), o professor explica como se estivesse falando para uma porta.
 
 ### 6. Registros (Tuplas ou Linhas)
 
@@ -80,9 +88,9 @@ Por exemplo, na tabela `Clientes`, um registro poderia conter os valores: `Nome:
 
 ## Modelos de Dados: Conceitual, Lógico e Físico - Uma Jornada do Abstrato ao Concreto
 
-A construção de um banco de dados é uma jornada que se inicia com a **compreensão profunda das necessidades do negócio** e culmina na implementação de uma solução tecnológica robusta. Essa jornada é guiada por três modelos fundamentais: **Conceitual, Lógico e Físico**, cada um desempenhando um papel crucial em diferentes estágios do processo.
+A construção de um banco de dados se inicia com a **compreensão das necessidades do negócio**, entendemos a "história" do sistema e então e a partir disso, focamos na implementação de uma solução tecnológica. Para isso, temos três modelos fundamentais: **Conceitual, Lógico e Físico**, cada um desempenhando um papel importante em diferentes estágios do processo.
 
-O ponto de partida é a **análise de requisitos**. Nessa fase, mergulhamos no universo do cliente, buscando entender a fundo as regras de negócio, os processos envolvidos e as necessidades dos usuários. É um momento de escuta ativa, onde buscamos capturar a essência do sistema que será construído, seus objetivos e como ele se encaixa no dia a dia da organização.
+O ponto de partida é a **análise de requisitos**. Nessa fase, escutamos os objetivos/vontades do cliente, buscando entender as regras de negócio, os processos envolvidos e as necessidades dos usuários. É um momento de escuta ativa, onde buscamos capturar o que será necessário para o sistema que será construído, seus objetivos e como ele se encaixa no dia a dia da organização.
 
 ### 1. Modelo Conceitual: A Essência do Negócio em um Esboço
 
@@ -93,6 +101,7 @@ Através de um processo de **abstração**, o Modelo Conceitual transforma a an�
 Neste modelo, focamos nos **conceitos fundamentais do negócio**. Por exemplo, em um sistema acadêmico, as entidades poderiam ser "Professor", "Turma" e "Aluno". Definimos também alguns **atributos essenciais** para cada entidade, como o "Nome" do professor, o "Código" da turma e a "Matrícula" do aluno.
 
 Os **relacionamentos** indicam como as entidades interagem entre si. Um professor "ministra" várias turmas, uma turma é "composta" por vários alunos, e um aluno "está matriculado" em uma turma.
+![15](https://github.com/user-attachments/assets/bb18a2b1-0ac6-4286-be23-f65630a28575)
 
 **Em resumo, o Modelo Conceitual:**
 
@@ -108,6 +117,7 @@ Após a validação do Modelo Conceitual, avançamos para o **Modelo Lógico**. 
 Um aspecto crucial dessa fase é a definição das **chaves primárias**.  Essas chaves são atributos (ou conjuntos de atributos) que **identificam unicamente** cada registro dentro de uma tabela. No exemplo de um cadastro de clientes, o CPF poderia ser a chave primária, garantindo que não haja dois clientes com o mesmo número.
 
 Além disso, estabelecemos formalmente os **relacionamentos entre as entidades** através das **chaves estrangeiras**. Essas chaves são atributos em uma tabela que fazem referência à chave primária de outra tabela. Em um sistema de vendas, cada item vendido precisa estar associado a um pedido específico. Essa ligação é feita por meio de uma chave estrangeira na tabela de "Itens Vendidos" que referencia a chave primária da tabela "Pedidos". Por sua vez, um pedido está associado a um cliente específico, sendo esse relacionamento feito por uma chave estrangeira que referencia a chave primária da tabela "Clientes".
+![16](https://github.com/user-attachments/assets/dc36096e-d11b-404f-923b-79d002d63077)
 
 **O Modelo Lógico, portanto:**
 
@@ -128,7 +138,35 @@ No Modelo Físico, definimos:
 *   A **estrutura física** das tabelas, incluindo índices, views e outros objetos do banco de dados.
 *   As **políticas de backup e segurança** que serão implementadas para garantir a proteção dos dados.
 
-Nesta fase, são gerados os **scripts SQL** (DDL - Data Definition Language) que serão utilizados para criar a estrutura do banco de dados no SGBD escolhido.
+
+**Diferente dos modelos Conceitual e Lógico, que são mais abstratos e independentes de tecnologia, o Modelo Físico é fortemente ligado ao SGBD escolhido.** Ele detalha:
+
+*   **Tabelas:** Nomes exatos das tabelas que serão criadas no banco de dados.
+*   **Colunas:** Nomes precisos das colunas, **tipos de dados** específicos suportados pelo SGBD, tamanhos e restrições (constraints) como `NOT NULL`, `UNIQUE`, `DEFAULT`, etc.
+*   **Chaves Primárias (PK):** Definição clara das chaves primárias, incluindo se serão `AUTO_INCREMENT` (no caso de chaves numéricas).
+*   **Chaves Estrangeiras (FK):**  Especificação precisa das chaves estrangeiras e dos relacionamentos, incluindo as regras de integridade referencial (ações `ON DELETE` e `ON UPDATE`, como `CASCADE`, `SET NULL`, `RESTRICT`, etc.).
+*   **Índices:** Definição de índices para otimizar a performance de consultas.
+*   **Outros Objetos:** Definição de outros objetos do banco de dados, como views (visões), stored procedures (procedimentos armazenados), triggers (gatilhos), etc.
+![diagrama_fisico](https://github.com/user-attachments/assets/f0ccb7af-e995-4f8f-932a-2a7a4c460667)
+
+
+Nesta fase, são gerados os **scripts SQL** (DDL - Data Definition Language) que serão utilizados para criar a estrutura do banco de dados no SGBD escolhido. Por exemplo:
+```sql
+CREATE TABLE pais (
+    id_pais INT PRIMARY KEY AUTO_INCREMENT,
+    nome_pais VARCHAR(100) NOT NULL,
+    sigla VARCHAR(2) NOT NULL,
+    codigo_telefone VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE estado (
+    id_estado INT PRIMARY KEY AUTO_INCREMENT,
+    nome_estado VARCHAR(100) NOT NULL,
+    uf VARCHAR(10), 
+    id_pais INT NOT NULL,
+    FOREIGN KEY (id_pais) REFERENCES pais(id_pais) ON DELETE CASCADE
+);
+```
 
 **Em resumo, o Modelo Físico:**
 
@@ -145,6 +183,7 @@ Para facilitar a compreensão e a comunicação dos modelos de dados, especialme
 ### Diagrama Entidade-Relacionamento (DER): Um Mapa do Banco de Dados
 
 O **DER** funciona como um mapa visual que ilustra a estrutura do banco de dados de forma clara e objetiva. Ele representa as **entidades**, seus **atributos** e os **relacionamentos** entre elas, permitindo uma compreensão rápida e intuitiva do sistema.
+![7](https://github.com/user-attachments/assets/98d0fbe7-563c-4829-baa8-7543af7d0374)
 
 **Como funciona?**
 
@@ -186,8 +225,7 @@ No MER, além dos elementos presentes no DER, encontramos:
 
 **Exemplo:**
 
-A imagem que você forneceu ilustra a diferença entre um DER e um MER para um sistema simples. No MER, podemos ver os tipos de dados dos atributos ("varchar", "int") e as cardinalidades dos relacionamentos (1:N, por exemplo).
-
+![10](https://github.com/user-attachments/assets/7cd56825-ab17-49a5-9072-9a61376be0b7)
 ## Cardinalidade: Definindo a Quantidade de Relacionamentos entre Tabelas
 
 A **cardinalidade** é um conceito fundamental na modelagem de dados, pois define a **quantidade** de instâncias (registros) de uma entidade (tabela) que podem estar associadas a uma instância de outra entidade. Em outras palavras, ela especifica **quantos registros de uma tabela podem se relacionar com quantos registros de outra tabela**. Compreender a cardinalidade é crucial para construir relacionamentos corretos e garantir a integridade dos dados.
@@ -528,8 +566,7 @@ Antes de começarmos a escrever código SQL, precisamos preparar o ambiente de d
 2.  **Instalação do MySQL:**
     O processo de instalação pode variar um pouco dependendo do sistema operacional. Siga as instruções do instalador. Recomenda-se também instalar o **MySQL Workbench**, uma ferramenta gráfica que facilita a administração e o desenvolvimento de bancos de dados MySQL.
 
-    Para uma instalação guiada, você pode seguir este tutorial em vídeo: [link para o vídeo tutorial](opens in a new tab) (substitua pelo link correto).
-
+    Para uma instalação guiada, você pode seguir este tutorial em vídeo: [link para o vídeo tutorial](https://www.youtube.com/watch?v=MQM_cyvxSao)
 ## SQL: A Linguagem Universal para Bancos de Dados Relacionais
 
 A **SQL** é a linguagem padrão para interagir com bancos de dados relacionais. Sua **simplicidade, eficiência e poder** a tornam uma ferramenta indispensável para qualquer profissional que lida com dados. A SQL é uma linguagem **declarativa**: você especifica **o que** deseja obter como resultado, e o SGBD (como o MySQL) se encarrega de encontrar a melhor maneira de executar a tarefa.
@@ -700,52 +737,54 @@ CREATE TABLE venda_produto (
 );
 ```
 
-#### Explicação dos Comandos CREATE TABLE:
+#### Explicação dos Comandos `CREATE TABLE`:
 
-CREATE TABLE nome_da_tabela: Inicia o comando para criar uma nova tabela.
-nome_da_coluna TIPO_DE_DADO [restrições]: Define uma coluna, seu tipo de dado e, opcionalmente, restrições.
-PRIMARY KEY (coluna): Define a coluna como chave primária. AUTO_INCREMENT faz com que o valor da chave primária seja gerado automaticamente pelo MySQL.
-NOT NULL: Impede que a coluna aceite valores nulos.
-UNIQUE: Garante que todos os valores na coluna sejam únicos.
-DEFAULT valor: Define um valor padrão para a coluna.
-FOREIGN KEY (coluna_local) REFERENCES tabela_referenciada(coluna_referenciada): Define uma chave estrangeira, estabelecendo um relacionamento com outra tabela.
-ALTER TABLE: Modificando a Estrutura de Tabelas Existentes
-O comando ALTER TABLE permite modificar a estrutura de tabelas já existentes. Isso é útil quando precisamos adicionar, remover ou modificar colunas, alterar tipos de dados ou gerenciar restrições.
+- `CREATE TABLE nome_da_tabela`: Inicia o comando para criar uma nova tabela.
+- `nome_da_coluna TIPO_DE_DADO [restrições]`: Define uma coluna, seu tipo de dado e, opcionalmente, restrições.
+- `PRIMARY KEY (coluna)`: Define a coluna como chave primária. AUTO_INCREMENT faz com que o valor da chave primária seja gerado automaticamente pelo MySQL.
+- `NOT NULL`: Impede que a coluna aceite valores nulos.
+- `UNIQUE:` Garante que todos os valores na coluna sejam únicos.
+- `DEFAULT valor:` Define um valor padrão para a coluna.
+- `FOREIGN KEY (coluna_local) REFERENCES tabela_referenciada(coluna_referenciada)`: Define uma chave estrangeira, estabelecendo um relacionamento com outra tabela.
+- `ALTER TABLE`: Modificando a Estrutura de Tabelas Existentes.
+   - O comando `ALTER TABLE` permite modificar a estrutura de tabelas já existentes. Isso é útil quando precisamos adicionar, remover ou modificar colunas, alterar tipos de dados ou gerenciar restrições.
 
 #### Exemplos:
 
-Adicionar uma nova coluna email à tabela cliente:
+1. Adicionar uma nova coluna `email` à tabela `cliente`:
 ```sql
 ALTER TABLE cliente
 ADD COLUMN email VARCHAR(255) AFTER nome; -- Adiciona a coluna após a coluna 'nome'
-Modificar o tipo de dado da coluna qtd_estoque na tabela produto para DECIMAL(10,2):
 ```
+
+2. Modificar o tipo de dado da coluna `qtd_estoque` na tabela produto para `DECIMAL(10,2)`:
 ```sql
 ALTER TABLE produto
 MODIFY COLUMN qtd_estoque DECIMAL(10,2);
-Remover a coluna descricao da tabela produto:
 ```
+3. Remover a coluna `descricao` da tabela `produto`:
 ```sql
 ALTER TABLE produto
 DROP COLUMN descricao;
-Renomear a coluna nome para nome_completo na tabela cliente:
 ```
+4. Renomear a coluna `nome` para `nome_completo` na tabela `cliente`:
 ```sql
 ALTER TABLE cliente
 CHANGE COLUMN nome nome_completo VARCHAR(255) NOT NULL;
-Adicionar uma chave estrangeira à tabela cidade referenciando a tabela estado (caso não tenha sido feito na criação):
 ```
+5. Adicionar uma chave estrangeira à tabela `cidade` referenciando a tabela `estado` (caso não tenha sido feito na criação):
 ```sql
 ALTER TABLE cidade
 ADD CONSTRAINT fk_cidade_estado
 FOREIGN KEY (estado_id) REFERENCES estado(id);
-Remover uma restrição de chave estrangeira:
 ```
+6. Remover uma restrição de chave estrangeira:
 ```sql
 ALTER TABLE cidade
 DROP FOREIGN KEY fk_cidade_estado;
-DROP TABLE: Excluindo Tabelas
 ```
+
+#### `DROP TABLE`: Excluindo Tabelas
 
 O comando DROP TABLE remove uma tabela permanentemente do banco de dados. Tenha extrema cautela ao utilizar este comando, pois a ação é irreversível!
 
@@ -754,15 +793,15 @@ Exemplo:
 DROP TABLE IF EXISTS venda_produto;
 ```
 
-O IF EXISTS é opcional, mas recomendado. Ele evita um erro caso a tabela não exista.
+O `IF EXISTS` é opcional, mas recomendado. Ele evita um erro caso a tabela não exista.
 
+#### `DROP DATABASE`: Excluindo Bancos de Dados
 
-```sql
- DROP DATABASE: Excluindo Bancos de Dados
-```
-O comando DROP DATABASE remove um banco de dados inteiro e todas as suas tabelas. Use com extrema cautela!
+O comando `DROP DATABASE` remove um banco de dados inteiro e todas as suas tabelas. Use com extrema cautela!
 
 Exemplo:
 ```sql
 DROP DATABASE IF EXISTS nome_do_banco_de_dados;
 ```
+
+
