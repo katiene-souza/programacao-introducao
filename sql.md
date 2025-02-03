@@ -803,5 +803,210 @@ Exemplo:
 ```sql
 DROP DATABASE IF EXISTS nome_do_banco_de_dados;
 ```
+## DML (Data Manipulation Language): Manipulando os Dados do seu Banco
 
+A **DML (Data Manipulation Language)** é o subconjunto da linguagem SQL responsável por **manipular os dados** armazenados nas tabelas do seu banco de dados.  Enquanto a DDL define a estrutura (tabelas, colunas, etc.), a DML permite **inserir, atualizar e excluir** os registros (linhas) dentro dessas tabelas. Os comandos DML são essenciais para manter seu banco de dados dinâmico e atualizado.
 
+Os principais comandos DML são:
+
+*   **`INSERT`:** Adiciona novos registros a uma tabela.
+*   **`UPDATE`:** Modifica os dados de registros existentes.
+*   **`DELETE`:** Remove registros de uma tabela.
+
+Vamos explorar cada um desses comandos com exemplos práticos, seguindo a lógica das tabelas `estado`, `cidade`, `cliente`, `venda` e `produto` que estamos utilizando.
+
+### `INSERT`: Inserindo Novos Registros
+
+O comando `INSERT` é utilizado para adicionar novas linhas a uma tabela.
+
+**Sintaxe Básica:**
+
+```sql
+INSERT INTO nome_da_tabela (coluna1, coluna2, ..., colunaN)
+VALUES (valor1, valor2, ..., valorN);
+```
+- `INSERT INTO nome_da_tabela`: Especifica a tabela onde os dados serão inseridos.
+- `(coluna1, coluna2, ..., colunaN)`: Lista das colunas que receberão os novos valores. É opcional, mas altamente recomendado para evitar erros e garantir a clareza do código. Se omitido, os valores devem ser fornecidos na mesma ordem das colunas na definição da tabela.
+- `VALUES (valor1, valor2, ..., valorN)`: Especifica os valores a serem inseridos nas colunas correspondentes.
+
+#### Exemplo 1: Inserindo um novo estado na tabela `estado`:
+```SQL
+INSERT INTO estado (nome, uf)
+VALUES ('São Paulo', 'SP');
+```
+
+#### Exemplo 2: Inserindo uma nova cidade na tabela `cidade`:
+```SQL
+INSERT INTO cidade (nome, estado_id)
+VALUES ('São Paulo', 1); -- Supondo que o ID do estado 'São Paulo' seja 1
+```
+#### Exemplo 3: Inserindo vários clientes na tabela `cliente`:
+
+```SQL
+INSERT INTO cliente (nome, cpf_cnpj, tipo, cidade_id)
+VALUES
+    ('João Silva', '12345678900', 'PF', 1),
+    ('Maria Souza', '98765432100', 'PF', 2),
+    ('Empresa ABC Ltda', '12345678000199', 'PJ', 1);
+```
+#### Observação Importante:
+
+- Se uma coluna for definida como `AUTO_INCREMENT` (geralmente a chave primária), você não precisa (e nem deve) especificar um valor para ela na cláusula `VALUES`. O MySQL se encarregará de gerar um valor único automaticamente.
+  
+#### Exemplo 4: Inserindo um produto na tabela `produto`:
+
+```SQL
+INSERT INTO produto (nome, descricao, preco, qtd_estoque)
+VALUES
+    ('Camiseta Branca', 'Camiseta básica de algodão', 29.90, 100),
+    ('Calça Jeans', 'Calça jeans azul', 79.90, 50);
+```
+
+#### Exemplo 5: Inserindo uma venda na tabela `venda`:
+
+```SQL
+INSERT INTO venda (cliente_id, total)
+VALUES
+(1, 29.90);
+```
+
+#### Exemplo 6: Inserindo produtos em uma venda, tabela `venda_produto`
+
+```SQL
+INSERT INTO venda_produto (venda_id, produto_id, quantidade, preco_unitario)
+VALUES
+(1, 1, 2, 29.90),
+(1, 2, 1, 79.90);
+```
+
+### `UPDATE`: Modificando Registros Existentes
+O comando `UPDATE` é usado para modificar os valores de colunas em registros já existentes em uma tabela.
+
+**Sintaxe Básica:**
+
+```SQL
+UPDATE nome_da_tabela
+SET coluna1 = novo_valor1,
+    coluna2 = novo_valor2,
+    ...
+    colunaN = novo_valorN
+WHERE condicao;
+```
+
+- `UPDATE nome_da_tabela`: Especifica a tabela onde os dados serão atualizados.
+- `SET coluna1 = novo_valor1, coluna2 = novo_valor2, ...`: Define quais colunas serão atualizadas e seus novos valores.
+- `WHERE condicao`: Filtra os registros que serão atualizados. É uma cláusula extremamente importante. Se omitida, todos os registros da tabela serão atualizados!
+
+#### Exemplo 1: Atualizar o e-mail de um cliente na tabela `cliente`:
+
+```SQL
+UPDATE cliente
+SET email = 'novoemail@email.com'
+WHERE id = 1; -- Atualiza apenas o cliente com ID 1
+```
+
+#### Exemplo 2: Aumentar o preço de um produto em 10% na tabela `produto`:
+
+```SQL
+UPDATE produto
+SET preco = preco * 1.10
+WHERE id = 1; -- Atualiza apenas o produto com ID 1
+```
+
+#### Exemplo 3: Atualizar o endereço de um cliente na tabela `cliente`:
+
+- Primeiro vamos inserir os dados de endereço na tabela `cidade` e `estado`:
+```SQL
+INSERT INTO estado (nome, uf) VALUES
+('Rio de Janeiro', 'RJ'),
+('Minas Gerais', 'MG');
+
+INSERT INTO cidade (nome, estado_id) VALUES
+('Rio de Janeiro', 2),
+('Belo Horizonte', 3);
+```
+
+- Agora vamos atualizar o endereço do cliente com `id` igual a 1:
+```SQL
+UPDATE cliente
+SET cidade_id = 3
+WHERE id = 1;
+```
+
+#### Exemplo 4: Mudar o tipo do cliente com `id` igual a 3 para `PJ`:
+
+```SQL
+UPDATE cliente
+SET tipo = 'PJ'
+WHERE id = 3;
+```
+
+#### Exemplo 5: Adicionar mais 10 unidades do produto com `id` igual a 2:
+
+```SQL
+UPDATE produto
+SET qtd_estoque = qtd_estoque + 10
+WHERE id = 2;
+```
+
+#### Exemplo 6: Atualizar a coluna `total` da tabela `venda`
+
+```SQL
+UPDATE venda
+SET total = 189.70
+WHERE id = 1;
+```
+Antes de executar um comando `UPDATE`, é altamente recomendável executar um `SELECT` com a mesma cláusula `WHERE` para verificar quais registros serão afetados. Isso ajuda a evitar atualizações indesejadas.
+
+### DELETE: Removendo Registros
+O comando `DELETE` é utilizado para remover registros de uma tabela. Use com extrema cautela, pois a exclusão é permanente!
+
+Sintaxe Básica:
+
+```SQL
+DELETE FROM nome_da_tabela
+WHERE condicao;
+```
+- `DELETE FROM nome_da_tabela`: Especifica a tabela da qual os registros serão removidos.
+- `WHERE condicao`: Filtra os registros que serão excluídos. Se omitida, todos os registros da tabela serão removidos!
+
+#### Exemplo 1: Excluir um cliente específico da tabela `cliente`:
+
+```SQL
+DELETE FROM cliente
+WHERE id = 3; -- Exclui o cliente com ID 3
+```
+
+#### Exemplo 2: Excluir produtos com estoque zerado da tabela produto:
+
+```SQL
+DELETE FROM produto
+WHERE qtd_estoque = 0;
+```
+
+#### Exemplo 3: Excluir uma venda da tabela venda:
+```SQL
+DELETE FROM venda
+WHERE id = 1;
+```
+
+#### Exemplo 4: Excluir os itens da venda da tabela venda_produto:
+
+```SQL
+DELETE FROM venda_produto
+WHERE venda_id = 1;
+```
+
+#### Cuidados ao usar o `DELETE`:
+
+- Sempre use a cláusula `WHERE` para especificar quais registros devem ser excluídos, a menos que você realmente queira apagar todos os dados da tabela.
+- Antes de executar um `DELETE`, faça um `SELECT` com a mesma cláusula `WHERE` para verificar quais registros serão afetados.
+- Considere a possibilidade de usar exclusão lógica em vez de exclusão física. Na exclusão lógica, você adiciona uma coluna (por exemplo, `ativo`, `status`) à tabela e marca os registros como "excluídos" (por exemplo, definindo `ativo` como 0) em vez de removê-los fisicamente. Isso permite recuperar os dados posteriormente, se necessário.
+- **Verifique as restrições de chave estrangeira.** Se a tabela que você está tentando excluir registros tiver relacionamentos com outras tabelas por meio de chaves estrangeiras, você pode precisar excluir os registros relacionados em outras tabelas primeiro ou usar a opção `ON DELETE CASCADE` na definição da chave estrangeira (se suportado pelo seu SGBD).
+
+#### Exemplo 5: Excluir uma cidade e seu estado
+
+```SQL
+DELETE FROM cidade WHERE id = 1;
+DELETE FROM estado WHERE id = 1;
+```
